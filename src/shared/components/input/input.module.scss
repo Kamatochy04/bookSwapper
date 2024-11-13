@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  & .label {
+    font-size: 14px;
+  }
+
+  & input {
+    width: 100%;
+    padding: 10px 22px;
+    border-radius: 10px;
+    background: #1d1d1d7e;
+    border: 1px solid #353535;
+    transition: all 0.3s;
+    &:focus {
+      border-color: var(--main-color);
+    }
+  }
+}

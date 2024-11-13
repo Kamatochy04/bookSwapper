@@ -1,0 +1,36 @@
+.line {
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  background: #00000038;
+  position: relative;
+
+  overflow: hidden;
+}
+
+.bar {
+  position: absolute;
+  border-radius: 10px;
+
+  top: 0;
+  left: 0;
+  width: 33%;
+  height: 100%;
+  background: var(--main-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.steps {
+  color: #ffffff88;
+  span {
+    color: var(--main-color);
+    font-size: 22px;
+    font-weight: 600;
+  }
+}
