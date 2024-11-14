@@ -1,0 +1,93 @@
+.book {
+  padding: 50px 0;
+  &__box {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    img {
+      height: 500px;
+      width: 400px;
+      background: #000;
+    }
+  }
+}
+
+.inf {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.name {
+  font-size: 32px;
+}
+
+.author {
+  font-size: 15px;
+}
+
+.descr {
+  line-height: 160%;
+  font-size: 14px;
+  max-width: 600px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 400px;
+  gap: 7px;
+  li {
+    display: flex;
+
+    gap: 5px;
+
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    span {
+      color: var(--main-color);
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}
+
+.button {
+  background: var(--main-color);
+  color: #000;
+  font-weight: 500;
+  padding: 10px 0;
+  border-radius: 10px;
+  font-size: 16px;
+
+  cursor: pointer;
+}
+//---------------------------------
+.similar {
+  padding: 50px 0;
+  background: #0000006b;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+  }
+}
+
+.book__card {
+  display: flex;
+  gap: 15px;
+
+  & img {
+    width: 150px;
+    height: 200px;
+    background: #000;
+  }
+  &_name {
+    font-size: 16px;
+  }
+  &_author {
+    font-size: 12px;
+  }
+}

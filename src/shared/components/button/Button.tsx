@@ -7,6 +7,10 @@ type ButtonPropsType = ComponentProps<"button"> & {
   className?: string;
 };
 
-export const Button: FC<ButtonPropsType> = ({ text, className }) => {
-  return <button className={`${className} ${styles.button}`}>{text}</button>;
+export const Button: FC<ButtonPropsType> = ({ text, className, ...props }) => {
+  return (
+    <button {...props} className={`${className} ${styles.button}`}>
+      {text}
+    </button>
+  );
 };

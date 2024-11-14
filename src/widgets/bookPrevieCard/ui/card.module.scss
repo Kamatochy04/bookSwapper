@@ -1,0 +1,27 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.img {
+  background: #000;
+  width: 200px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.descr {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  font-size: 18px;
+}
+
+.author {
+  color: #ffffff52;
+  font-size: 12px;
+}

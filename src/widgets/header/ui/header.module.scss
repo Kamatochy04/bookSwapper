@@ -1,0 +1,33 @@
+.header {
+  &__container {
+    padding: 15px 0;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.sub_header {
+  border-top: 1px solid #ffffff91;
+  border-bottom: 1px solid #ffffff91;
+
+  padding: 10px;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
