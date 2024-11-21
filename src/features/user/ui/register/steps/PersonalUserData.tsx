@@ -7,9 +7,9 @@ import styles from "../styels/form.module.scss";
 export const PersonalUserData = () => {
   const { prevStep } = useContext(RegisterContext);
 
-  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-  };
+  // const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  //   event.preventDefault();
+  // };
 
   const toBack = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     event.preventDefault();

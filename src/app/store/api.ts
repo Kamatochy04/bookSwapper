@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery, retry } from "@reduxjs/toolkit/query/react";
 
 const baseQuery = fetchBaseQuery({
   baseUrl: "http://localhost:4242",
-  prepareHeaders: (headers, { getState }) => {
+  prepareHeaders: (headers) => {
     headers.set("Content-Type", "application/json");
     // const token =
     //   (getState() as RootState).auth.user?.token ||

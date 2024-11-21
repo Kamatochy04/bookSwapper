@@ -3,12 +3,12 @@ import { Button, Input } from "../../../../../shared/components";
 
 import styles from "../styels/form.module.scss";
 import { RegisterContext } from "../RegisterStapper";
-import { useRegisterMutation } from "../../../api/register.api";
+// import { useRegisterMutation } from "../../../api/register.api";
 
 export const UserDataform = () => {
   const { nextStep } = useContext(RegisterContext);
 
-  const [register, { isLoading }] = useRegisterMutation();
+  // const [register, { isLoading }] = useRegisterMutation();
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -24,7 +24,7 @@ export const UserDataform = () => {
 
   return (
     <>
-      {isLoading ? <h1>Loading...</h1> : null}
+      {/* {isLoading ? <h1>Loading...</h1> : null} */}
       <form className={styles.form} onSubmit={onSubmit}>
         <Input label="Имя пользователя" />
         <Input label="Почта" />
