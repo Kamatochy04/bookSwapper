@@ -28,6 +28,11 @@ export const Header = () => {
                 onClick={() => navigate("/register")}
               />
             </div>
+            <SquareButton
+              text={"Регистрация"}
+              onClick={() => navigate("/register")}
+              className={styles.header__button}
+            />
 
             <div className={styles.burger}>
               <span></span>

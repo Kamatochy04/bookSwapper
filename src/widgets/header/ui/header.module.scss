@@ -7,6 +7,9 @@
     align-items: center;
     gap: 20px;
   }
+  &__button {
+    display: none;
+  }
 }
 
 .buttons {
@@ -57,7 +60,7 @@
     display: none;
   }
   .burger {
-    display: flex;
+    display: none;
   }
 
   .header {
@@ -73,6 +76,9 @@
       .buttons {
         display: none;
       }
+    }
+    &__button {
+      display: block;
     }
   }
 }

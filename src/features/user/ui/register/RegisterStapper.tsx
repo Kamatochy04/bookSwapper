@@ -49,9 +49,11 @@ export const RegisterStapper = () => {
       <div className={styles.container}>
         <Logo />
 
-        <RegisterContext.Provider value={{ nextStep, prevStep }}>
-          {steps[currentStep]}
-        </RegisterContext.Provider>
+        <div className={styles.content}>
+          <RegisterContext.Provider value={{ nextStep, prevStep }}>
+            {steps[currentStep]}
+          </RegisterContext.Provider>
+        </div>
 
         <Steps currentStep={currentStep + 1} countOfStep={3} />
         <div className={styles.footer}>
