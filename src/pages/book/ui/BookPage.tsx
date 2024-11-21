@@ -44,11 +44,14 @@ const BookPage = () => {
               </ul>
               <button className={styles.button}>Связаться с продавцов</button>
             </div>
+            <button className={`${styles.button} ${styles.button_adaptiv}`}>
+              Связаться с продавцов
+            </button>
           </div>
         </Container>
       </div>
 
-      <div className={styles.similar}>
+      {/* <div className={styles.similar}>
         <Container>
           <h3>Книги того-же автора</h3>
           <div className={styles.similar__container}>
@@ -82,7 +85,7 @@ const BookPage = () => {
             </div>
           </div>
         </Container>
-      </div>
+      </div> */}
     </>
   );
 };
