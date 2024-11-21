@@ -11,12 +11,12 @@ const books = [
   { name: "Скажи жизни да", author: "Андрей Валюк", img: img, id: 1 },
   { name: "Сто лет одиночества", author: "Андрей Валюк", img: img_2, id: 2 },
   { name: "Мы", author: "Андрей Валюк", img: img_3, id: 3 },
-  { name: "Скажи жизни да", author: "Андрей Валюк", img: img, id: 4 },
-  { name: "Сто лет одиночества", author: "Андрей Валюк", img: img_2, id: 5 },
-  { name: "Мы", author: "Андрей Валюк", img: img_3, id: 6 },
-  { name: "Скажи жизни да", author: "Андрей Валюк", img: img, id: 7 },
-  { name: "Сто лет одиночества", author: "Андрей Валюк", img: img_2, id: 8 },
-  { name: "Мы", author: "Андрей Валюк", img: img_3, id: 9 },
+  // { name: "Скажи жизни да", author: "Андрей Валюк", img: img, id: 4 },
+  // { name: "Сто лет одиночества", author: "Андрей Валюк", img: img_2, id: 5 },
+  // { name: "Мы", author: "Андрей Валюк", img: img_3, id: 6 },
+  // { name: "Скажи жизни да", author: "Андрей Валюк", img: img, id: 7 },
+  // { name: "Сто лет одиночества", author: "Андрей Валюк", img: img_2, id: 8 },
+  // { name: "Мы", author: "Андрей Валюк", img: img_3, id: 9 },
 ];
 
 const MainPage = () => {
