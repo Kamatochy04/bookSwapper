@@ -20,14 +20,16 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
+  border: 1px solid #ffffff00;
+  padding: 8px;
   p {
     font-size: 10px;
   }
   &_active {
     border-radius: 8px;
-    padding: 8px;
 
-    border: 1px solid #e08d1f5e;
+    border-color: #e08d1f5e;
+    transition: all 0.4s;
     p {
       color: var(--main-color);
     }

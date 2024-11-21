@@ -6,28 +6,49 @@ import {
 } from "@ant-design/icons";
 import { Container } from "../../../shared/components";
 import styles from "./footer.module.scss";
+import { NavLink } from "react-router-dom";
 
 export const ModelFooter = () => {
   return (
     <div className={styles.footer}>
       <Container>
         <div className={styles.footer__container}>
-          <div className={`${styles.icon} ${styles.icon_active}`}>
+          <NavLink
+            className={({ isActive }) =>
+              `${styles.icon} ${isActive ? styles.icon_active : ""}`
+            }
+            to={"/"}
+          >
             <HomeOutlined />
             <p>Гловное</p>
-          </div>
-          <div className={styles.icon}>
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              `${styles.icon} ${isActive ? styles.icon_active : ""}`
+            }
+            to={"search"}
+          >
             <SearchOutlined />
             <p>Поиск</p>
-          </div>
-          <div className={styles.icon}>
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              `${styles.icon} ${isActive ? styles.icon_active : ""}`
+            }
+            to={" chat"}
+          >
             <CommentOutlined />
             <p>Чаты</p>
-          </div>
-          <div className={styles.icon}>
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              `${styles.icon} ${isActive ? styles.icon_active : ""}`
+            }
+            to={"accaunt"}
+          >
             <UserOutlined />
             <p>Аккаунт</p>
-          </div>
+          </NavLink>
         </div>
       </Container>
     </div>
