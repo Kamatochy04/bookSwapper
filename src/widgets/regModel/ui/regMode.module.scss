@@ -1,0 +1,46 @@
+.ofervie {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #00000070;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 20000;
+  .model {
+    animation: show 0.8s;
+    width: 450px;
+    padding: 30px;
+    background: #424242;
+    z-index: 100;
+    border-radius: 20px 20px 0 0;
+    p {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+}
+
+.button {
+  background: rgb(255, 208, 0);
+  width: 100%;
+  color: #000;
+  margin-top: 30px;
+  &_2 {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@keyframes show {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY();
+  }
+}

@@ -7,8 +7,16 @@ import {
 import { Container } from "../../../shared/components";
 import styles from "./footer.module.scss";
 import { NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { toggleRegisterModel } from "../../regModel/services/showModel";
 
 export const ModelFooter = () => {
+  const dispatch = useDispatch();
+
+  const toAccaunt = () => {
+    dispatch(toggleRegisterModel(true));
+  };
+
   return (
     <div className={styles.footer}>
       <Container>
@@ -45,6 +53,10 @@ export const ModelFooter = () => {
               `${styles.icon} ${isActive ? styles.icon_active : ""}`
             }
             to={"accaunt"}
+            onClick={(e) => {
+              e.preventDefault();
+              toAccaunt();
+            }}
           >
             <UserOutlined />
             <p>Аккаунт</p>

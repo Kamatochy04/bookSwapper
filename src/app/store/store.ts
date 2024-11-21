@@ -1,9 +1,13 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+
+import registerModel from "../../widgets/regModel/services/showModel";
+
 import { api } from "./api";
 
 export const store = configureStore({
   reducer: {
     [api.reducerPath]: api.reducer,
+    registerModel,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(api.middleware).prepend(),

@@ -6,6 +6,7 @@ import { RegisterStapper } from "../features/user";
 import MainLayout from "./layout/MainLayout";
 
 import "./styles/global.scss";
+import RegModel from "../widgets/regModel";
 
 const PersonalPage = lazy(() => import("../pages/personal/index"));
 const BookPage = lazy(() => import("../pages/book/index"));
@@ -15,6 +16,7 @@ const NewBook = lazy(() => import("../pages/newBook/index"));
 export const App = () => {
   return (
     <div>
+      <RegModel />
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<MainPage />} />
