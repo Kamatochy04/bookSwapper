@@ -1,27 +1,47 @@
 .card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
 .img {
-  background: #000;
-  width: 200px;
-  height: 300px;
+  width: 100%;
+  aspect-ratio: 1;
+  max-height: 280px;
   border-radius: 5px;
+
+  background: #000;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .descr {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .name {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .author {
   color: #ffffff52;
   font-size: 12px;
+}
+
+.user {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #0066ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
 }

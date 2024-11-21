@@ -1,1 +1,3 @@
-export { PersonalPage } from "./ui/PersonalPage";
+import PersonalPage from "./ui/PersonalPage";
+
+export default PersonalPage;

@@ -1,7 +1,7 @@
 import { Container } from "../../../shared/components";
 import styles from "./bookpage.module.scss";
 
-export const BookPage = () => {
+const BookPage = () => {
   return (
     <>
       <div className={styles.book}>
@@ -86,3 +86,5 @@ export const BookPage = () => {
     </>
   );
 };
+
+export default BookPage;

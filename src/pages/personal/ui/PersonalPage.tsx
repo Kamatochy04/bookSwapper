@@ -2,7 +2,7 @@ import { Container } from "../../../shared/components";
 import styles from "./personal.module.scss";
 import { CardItem } from "../../../widgets";
 
-export const PersonalPage = () => {
+const PersonalPage = () => {
   return (
     <div className={styles.personal}>
       <Container>
@@ -24,3 +24,5 @@ export const PersonalPage = () => {
     </div>
   );
 };
+
+export default PersonalPage;

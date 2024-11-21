@@ -11,7 +11,7 @@ export const Header = () => {
   const navigate = useNavigate();
 
   return (
-    <>
+    <div className={styles.container}>
       <header className={styles.header}>
         <Container>
           <div className={styles.header__container}>
@@ -28,6 +28,12 @@ export const Header = () => {
                 onClick={() => navigate("/register")}
               />
             </div>
+
+            <div className={styles.burger}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </Container>
       </header>
@@ -38,29 +44,38 @@ export const Header = () => {
               <a href="">Драмма</a>
             </li>
             <li className={styles.sub_header__item}>
-              <a href="">Драмма</a>
+              <a href="">Фэнтези</a>
             </li>
             <li className={styles.sub_header__item}>
-              <a href="">Драмма</a>
+              <a href="">Триллер</a>
             </li>
             <li className={styles.sub_header__item}>
-              <a href="">Драмма</a>
+              <a href="">Научная фантастика</a>
             </li>
             <li className={styles.sub_header__item}>
-              <a href="">Драмма</a>
+              <a href="">Комедия</a>
             </li>
             <li className={styles.sub_header__item}>
-              <a href="">Драмма</a>
+              <a href="">Исторический роман</a>
             </li>
             <li className={styles.sub_header__item}>
-              <a href="">Драмма</a>
+              <a href="">Детектив</a>
             </li>
             <li className={styles.sub_header__item}>
-              <a href="">Драмма</a>
+              <a href="">Вестерн</a>
+            </li>
+            <li className={styles.sub_header__item}>
+              <a href="">Сказка</a>
+            </li>
+            <li className={styles.sub_header__item}>
+              <a href="">Фантастика</a>
+            </li>
+            <li className={styles.sub_header__item}>
+              <a href="">Холрор</a>
             </li>
           </ul>
         </Container>
       </div>
-    </>
+    </div>
   );
 };

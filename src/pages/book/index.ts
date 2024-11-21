@@ -1,1 +1,3 @@
-export { BookPage } from "./ui/BookPage";
+import BookPage from "./ui/BookPage";
+
+export default BookPage;
