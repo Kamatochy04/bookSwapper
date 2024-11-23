@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { Footer, Header, ModelFooter } from "../../widgets";
+import { Header, ModelFooter } from "../../widgets";
 import { Suspense } from "react";
 
 const MainLayout = () => {
@@ -15,7 +15,7 @@ const MainLayout = () => {
 
       <ModelFooter />
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

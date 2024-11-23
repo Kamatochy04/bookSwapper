@@ -43,7 +43,7 @@ export const ModelFooter = () => {
             className={({ isActive }) =>
               `${styles.icon} ${isActive ? styles.icon_active : ""}`
             }
-            to={" chat"}
+            to={"chats"}
           >
             <CommentOutlined />
             <p>Чаты</p>
