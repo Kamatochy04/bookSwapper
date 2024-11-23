@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  .header {
+    padding: 10px;
+    background: #0e0e0ee8;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 10px;
+    .avatart {
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgb(0, 68, 255);
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  .messages {
+    flex-grow: 1;
+  }
+
+  .footer {
+    &__input {
+      padding: 20px;
+      background: #0e0e0ee8;
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+}

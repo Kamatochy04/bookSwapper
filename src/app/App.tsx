@@ -13,6 +13,7 @@ const BookPage = lazy(() => import("../pages/book/index"));
 const MainPage = lazy(() => import("../pages/main/index"));
 const NewBook = lazy(() => import("../pages/newBook/index"));
 const Chats = lazy(() => import("../pages/chats/index"));
+const Chat = lazy(() => import("../pages/chat/index"));
 
 export const App = () => {
   return (
@@ -25,9 +26,9 @@ export const App = () => {
           <Route path="accaunt" element={<PersonalPage />} />
           <Route path="crete-book" element={<NewBook />} />
           <Route path="chats" element={<Chats />} />
-          {/* <Route path="chats/:id" element={<Chat />} /> */}
         </Route>
 
+        <Route path="chat/:chatId" element={<Chat />} />
         <Route path="register" element={<RegisterStapper />} />
       </Routes>
     </div>
