@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import { RegisterStapper } from "../features/user";
@@ -28,7 +28,14 @@ export const App = () => {
           <Route path="chats" element={<Chats />} />
         </Route>
 
-        <Route path="chat/:chatId" element={<Chat />} />
+        <Route
+          path="chat/:chatId"
+          element={
+            <Suspense>
+              <Chat />
+            </Suspense>
+          }
+        />
         <Route path="register" element={<RegisterStapper />} />
       </Routes>
     </div>
