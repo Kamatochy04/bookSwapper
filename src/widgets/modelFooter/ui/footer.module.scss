@@ -7,7 +7,7 @@
   background: #161616;
   border-top: 1px solid #ffffff7c;
   &__container {
-    padding: 10px 0;
+    padding: 3px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,13 +22,15 @@
   gap: 5px;
   border: 1px solid #ffffff00;
   padding: 8px;
+  svg {
+    width: 25px;
+    height: 25px;
+  }
   p {
-    font-size: 10px;
+    font-size: 12px;
   }
   &_active {
     border-radius: 8px;
-
-    border-color: #e08d1f5e;
     transition: all 0.4s;
     p {
       color: var(--main-color);
