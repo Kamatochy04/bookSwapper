@@ -1,4 +1,7 @@
 import { Container } from "../../../shared/components";
+
+import book from "./bo.png";
+
 import styles from "./bookpage.module.scss";
 
 const BookPage = () => {
@@ -7,85 +10,37 @@ const BookPage = () => {
       <div className={styles.book}>
         <Container>
           <div className={styles.book__box}>
-            <img src="" alt="" />
-            <div className={styles.inf}>
-              <div>
-                <h3 className={styles.name}>1984</h3>
-                <p className={styles.author}>Андрей Валюк</p>
-              </div>
-              <p className={styles.descr}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatibus sint unde, eligendi temporibus totam, dolorum
-                asperiores eius quod sed autem ipsum! Ducimus quisquam fuga
-                eaque illum ut nostrum voluptatum beatae! Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Dicta excepturi
-                exercitationem incidunt facere totam. Corrupti dolorem
-                aspernatur mollitia eaque nesciunt cum dolor facilis molestias
-                nostrum reiciendis? Iste voluptatibus nemo ex.
-              </p>
-
-              <ul className={styles.list}>
-                <li>
-                  Жанры:
-                  <span>
-                    Научная фантастика, Антиутопическая литература, Социальная
-                    фантастика, Политическая фантастика
-                  </span>
-                </li>
-                <li>
-                  Оригинал издан: <span>8 июня 1949</span>
-                </li>
-                <li>
-                  Язык оригинала: <span>Английский</span>
-                </li>
-                <li>
-                  Количество страниц: <span>203</span>
-                </li>
-              </ul>
-              <button className={styles.button}>Связаться с продавцов</button>
+            <div className={styles.img_bg}>
+              <div className={styles.img_main}></div>
             </div>
-            <button className={`${styles.button} ${styles.button_adaptiv}`}>
-              Связаться с продавцов
-            </button>
+            <div className={styles.descr}>
+              <p className={styles.author}>А. П. Чехов</p>
+              <p className={styles.name}>Каштанка</p>
+              <p className={styles.genre}>Жанр: рассказ</p>
+            </div>
+
+            <div className={styles.inline}>
+              <div className={styles.man}>
+                <div className={styles.avatar}>A</div>
+
+                <div className={styles.man__inf}>
+                  <p className={styles.ovner}>Владелец</p>
+                  <p className={styles.man__name}>Адамина Дарья</p>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.count__text}>Количество страниц: 125</div>
+
+            <p className={styles.main_descr}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequuntur in accusantium ratione aliquam? Fugiat sint officiis,
+              voluptate quis cumque ea quibusdam dolores assumenda natus
+              delectus numquam atque accusantium, expedita et.
+            </p>
           </div>
         </Container>
       </div>
-
-      {/* <div className={styles.similar}>
-        <Container>
-          <h3>Книги того-же автора</h3>
-          <div className={styles.similar__container}>
-            <div className={styles.book__card}>
-              <img src="" alt="" />
-              <div className={styles.book__card_inf}>
-                <div className={styles.book__card_name}>1984</div>
-                <div className={styles.book__card_author}>Андрей валюк</div>
-              </div>
-            </div>
-            <div className={styles.book__card}>
-              <img src="" alt="" />
-              <div className={styles.book__card_inf}>
-                <div className={styles.book__card_name}>1984</div>
-                <div className={styles.book__card_author}>Андрей валюк</div>
-              </div>
-            </div>
-            <div className={styles.book__card}>
-              <img src="" alt="" />
-              <div className={styles.book__card_inf}>
-                <div className={styles.book__card_name}>1984</div>
-                <div className={styles.book__card_author}>Андрей валюк</div>
-              </div>
-            </div>
-            <div className={styles.book__card}>
-              <img src="" alt="" />
-              <div className={styles.book__card_inf}>
-                <div className={styles.book__card_name}>1984</div>
-                <div className={styles.book__card_author}>Андрей валюк</div>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </div> */}
     </>
   );
 };

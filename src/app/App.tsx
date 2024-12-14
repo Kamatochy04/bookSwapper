@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import { RegisterStapper } from "../features/user";
+import { LoginForm, RegisterStapper } from "../features/user";
 
 import MainLayout from "./layout/MainLayout";
 
@@ -14,7 +14,6 @@ const MainPage = lazy(() => import("../pages/main/index"));
 const NewBook = lazy(() => import("../pages/newBook/index"));
 const Chats = lazy(() => import("../pages/chats/index"));
 const Chat = lazy(() => import("../pages/chat/index"));
-
 export const App = () => {
   return (
     <div>
@@ -27,7 +26,6 @@ export const App = () => {
           <Route path="crete-book" element={<NewBook />} />
           <Route path="chats" element={<Chats />} />
         </Route>
-
         <Route
           path="chat/:chatId"
           element={
@@ -36,6 +34,7 @@ export const App = () => {
             </Suspense>
           }
         />
+        <Route path="login" element={<LoginForm />} />
         <Route path="register" element={<RegisterStapper />} />
       </Routes>
     </div>

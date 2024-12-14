@@ -12,6 +12,7 @@ import {
 } from "../../../../shared/utils/sessionStorage";
 import styles from "./styels/registerStapper.module.scss";
 import { AuthContexType } from "../../../../model";
+import { useNavigate } from "react-router-dom";
 
 const steps = [<UserDataform />, <ConfirmEmailForm />, <PersonalUserData />];
 
@@ -24,6 +25,8 @@ export const RegisterStapper = () => {
   const [currentStep, setCurrentStep] = useState(
     Number(getSessinStorage("register-key")) | 0
   );
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     setSessionStorage("register-key", currentStep);
@@ -57,7 +60,7 @@ export const RegisterStapper = () => {
 
         <Steps currentStep={currentStep + 1} countOfStep={3} />
         <div className={styles.footer}>
-          <p>Войти в аккаунт</p>
+          <p onClick={() => navigate("/login")}>Войти в аккаунт</p>
           <p>Забыли пароль</p>
         </div>
       </div>

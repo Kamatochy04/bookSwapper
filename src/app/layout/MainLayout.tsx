@@ -14,8 +14,6 @@ const MainLayout = () => {
       </div>
 
       <ModelFooter />
-
-      {/* <Footer /> */}
     </div>
   );
 };
