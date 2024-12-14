@@ -1,7 +1,5 @@
 import { Container } from "../../../shared/components";
 
-import book from "./bo.png";
-
 import styles from "./bookpage.module.scss";
 
 const BookPage = () => {
