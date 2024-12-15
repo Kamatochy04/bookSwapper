@@ -1,13 +1,11 @@
 .card {
   display: flex;
-  flex-direction: column;
   gap: 15px;
 }
 
 .img {
   width: 100%;
-  aspect-ratio: 1;
-  max-height: 280px;
+  aspect-ratio: 5/6;
   border-radius: 5px;
 
   background: #000;
@@ -20,28 +18,36 @@
 
 .descr {
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 30px;
-  justify-content: space-between;
-  gap: 10px;
+ 
 }
 
 .name {
-  font-size: 16px;
+  color: #000;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .author {
-  color: #ffffff52;
+  color: #00000082;
   font-size: 12px;
 }
 
-.user {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #0066ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
+.text{
+  font-size: 16px;
+  margin-top: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  font-size: 14px;
+}
+
+.button{
+  padding: 8px;
+  text-align: center;
+  width: 100%;
+  border: 1px solid var(--main-color);
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 20px;
 }

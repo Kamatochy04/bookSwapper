@@ -1,7 +1,7 @@
 import { Container, Input } from "../../../shared/components";
-// import { BookPrevieCard } from "../../../widgets";
+import { BookPrevieCard } from "../../../widgets";
 
-// import img from "../../../shared/assets/book_1.jpg";
+import img from "../../../shared/assets/book_1.jpg";
 // import img_2 from "../../../shared/assets/book_2.jpg";
 // import img_3 from "../../../shared/assets/book_3.jpg";
 
@@ -61,7 +61,9 @@ const MainPage = () => {
           </div>
         
           <div className={styles.list}>
-            
+            <BookPrevieCard name={"Скажи жизни да"} author={"А.В. Валентинович"} img={img} id={0} />
+            <BookPrevieCard name={"Скажи жизни да"} author={"А.В. Валентинович"} img={img} id={0} />
+            <BookPrevieCard name={"Скажи жизни да"} author={"А.В. Валентинович"} img={img} id={0} />
           </div>
         </Container>
       </div>

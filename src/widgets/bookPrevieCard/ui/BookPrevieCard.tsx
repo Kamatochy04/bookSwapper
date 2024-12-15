@@ -27,8 +27,9 @@ export const BookPrevieCard: FC<BookPrevieCardProps> = ({
         <div>
           <div className={styles.name}>{name}</div>
           <p className={styles.author}>{author}</p>
+          <div className={styles.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sequi asperiores alias voluptas. Unde amet alias vero sint porro cumque impedit corporis optio, aspernatur, fuga, autem deleniti veniam! Accusantium, consequatur.</div>
+          <button className={styles.button}>Написать владельцу</button>
         </div>
-        <div className={styles.user}>B</div>
       </div>
     </div>
   );
