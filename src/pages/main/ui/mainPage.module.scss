@@ -1,4 +1,6 @@
 .books {
+  width: 400px;
+  margin: 0 auto;
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -6,6 +8,68 @@
     margin: 0 auto;
     gap: 15px;
   }
+}
+
+.input{
+  display: grid;
+  grid-template-columns: 1fr 37px;
+  align-items: center;
+  gap: 5px;
+}
+
+.icon{
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000000d2;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.genre{
+  margin-top: 20px;
+  &__title{
+    font-size: 24px;
+  }
+  &__container{
+    border-bottom: 1px solid var(--main-color);
+    border-top: 1px solid var(--main-color);
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow-x: scroll;
+    &::-webkit-scrollbar { 
+      width: 12px; 
+      height: 12px; 
+    }
+  }
+  &__icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    svg{
+      width: 50px;
+      height: 50px;
+    }
+    &_text{
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+}
+
+.list{
+  margin-top: 20px;
+  border-radius: 20px 20px 0 0;
+  padding: 10px;
+  height: 600px;
+  width: 100%;
+  background: #e672e679;
 }
 
 @media (max-width: 540px) {
