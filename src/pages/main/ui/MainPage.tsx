@@ -61,7 +61,7 @@ const MainPage = () => {
           </div>
         
           <div className={styles.list}>
-            asd
+            
           </div>
         </Container>
       </div>
