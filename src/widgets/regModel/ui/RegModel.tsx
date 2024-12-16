@@ -17,21 +17,19 @@ const RegModel = () => {
           <div className={styles.model}>
             <p>Для пользования нашим сервисов необходимо пройти регистрацию</p>
             <Button
-              text={"Регистрация"}
               onClick={() => {
                 dispathc(toggleRegisterModel(false));
                 navigate("/register");
               }}
               className={styles.button}
-            />
+            >Регистрация</Button>
             <Button
-              text={"Вернуться назад"}
               onClick={() => {
                 dispathc(toggleRegisterModel(false));
                 navigate("/");
               }}
               className={styles.button_2}
-            />
+            >Вернуться назад</Button>
           </div>
         </div>
       ) : null}

@@ -21,8 +21,8 @@ export const PersonalUserData = () => {
       <Input label="Имя *" />
       <Input label="Фамилия " />
       <div className={styles.buttons}>
-        <Button text="Назад" onClick={toBack} />
-        <Button text="Далее" type="submit" />
+        <Button onClick={toBack}>Назад</Button>
+        <Button type="submit" >Далее</Button>
       </div>
     </form>
   );

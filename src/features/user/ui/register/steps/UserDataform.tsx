@@ -30,7 +30,7 @@ export const UserDataform = () => {
         <Input label="Почта" />
         <Input label="Пароль" />
         <Input label="Повторите пароль" />
-        <Button text="Далее" type="submit" />
+        <Button type="submit" >Далее</Button>
       </form>
     </>
   );

@@ -3,14 +3,14 @@ import { ComponentProps, FC } from "react";
 import styles from "./button.module.scss";
 
 type ButtonPropsType = ComponentProps<"button"> & {
-  text: string;
+  children: React.ReactNode;
   className?: string;
 };
 
-export const Button: FC<ButtonPropsType> = ({ text, className, ...props }) => {
+export const Button: FC<ButtonPropsType> = ({ children, className, ...props }) => {
   return (
     <button {...props} className={`${className} ${styles.button}`}>
-      {text}
+      {children}
     </button>
   );
 };

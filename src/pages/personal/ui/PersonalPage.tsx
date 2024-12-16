@@ -1,9 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import { Container } from "../../../shared/components";
 import styles from "./personal.module.scss";
 // import { CardItem } from "../../../widgets";
 import { PlusOutlined, SettingOutlined } from "@ant-design/icons";
 
 const PersonalPage = () => {
+const navigate = useNavigate()
+
   return (
     <div className={styles.personal}>
       <Container>
@@ -16,7 +19,7 @@ const PersonalPage = () => {
             </div>
             <SettingOutlined className={styles.icon} />
           </div>
-          <button className={styles.button}><PlusOutlined /> Создать новое объявление</button>
+          <button className={styles.button} onClick={() => navigate("/create")}><PlusOutlined /> Создать новое объявление</button>
 
           <div className={styles.list}>
             <div className={styles.card}></div>
@@ -25,12 +28,6 @@ const PersonalPage = () => {
             <div className={styles.card}></div>
             <div className={styles.card}></div>
             <div className={styles.card}></div>
-            <div className={styles.card}></div>
-            {/* <CardItem />
-            <CardItem />
-            <CardItem />
-            <CardItem />
-            <CardItem /> */}
           </div>
         </div>
       </Container>

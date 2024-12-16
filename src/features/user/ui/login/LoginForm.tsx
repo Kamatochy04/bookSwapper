@@ -20,8 +20,8 @@ export const LoginForm = () => {
             <Input label="Имя пользователя" />
             <Input label="Пароль " />
             <div className={styles.login_button}>
-              <Button text="Войти в аккаунт" type="submit" />
-              <Button text="Вернуться назад" onClick={toBack} />
+              <Button type="submit" >Войти в ааккаунт</Button>
+              <Button onClick={toBack} >Вернуться назад</Button>
             </div>
           </form>
         </div>

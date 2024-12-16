@@ -23,8 +23,8 @@ export const ConfirmEmailForm = () => {
       <p>На почту отправлен код подтверждения</p>
       <Input label="Код" />
       <div className={styles.buttons}>
-        <Button text="Назад" onClick={toBack} />
-        <Button text="Далее" type="submit" />
+        <Button onClick={toBack}>Назад</Button>
+        <Button type="submit" >Далее</Button>
       </div>
     </form>
   );
