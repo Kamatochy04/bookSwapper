@@ -25,6 +25,7 @@ export const App = () => {
           <Route path="accaunt" element={<PersonalPage />} />
           <Route path="crete-book" element={<NewBook />} />
           <Route path="chats" element={<Chats />} />
+          
         </Route>
         <Route
           path="chat/:chatId"

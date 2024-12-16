@@ -1,6 +1,7 @@
 import { Container } from "../../../shared/components";
 import styles from "./personal.module.scss";
-import { CardItem } from "../../../widgets";
+// import { CardItem } from "../../../widgets";
+import { PlusOutlined, SettingOutlined } from "@ant-design/icons";
 
 const PersonalPage = () => {
   return (
@@ -8,16 +9,28 @@ const PersonalPage = () => {
       <Container>
         <div className={styles.personal__container}>
           <div className={styles.header}>
-            <h2 className={styles.title}>Все мои книги</h2>
-            <button className={styles.button}>Опубликовать новую книгу </button>
+            <div className={styles.avatar}>A</div>
+            <div className={styles.inf}>
+              <h2 className={styles.title}>Андрей Валюк</h2>
+              <p className={styles.title}>userName</p>
+            </div>
+            <SettingOutlined className={styles.icon} />
           </div>
+          <button className={styles.button}><PlusOutlined /> Создать новое объявление</button>
 
           <div className={styles.list}>
+            <div className={styles.card}></div>
+            <div className={styles.card}></div>
+            <div className={styles.card}></div>
+            <div className={styles.card}></div>
+            <div className={styles.card}></div>
+            <div className={styles.card}></div>
+            <div className={styles.card}></div>
+            {/* <CardItem />
             <CardItem />
             <CardItem />
             <CardItem />
-            <CardItem />
-            <CardItem />
+            <CardItem /> */}
           </div>
         </div>
       </Container>
