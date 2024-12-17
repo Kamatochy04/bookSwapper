@@ -1,6 +1,8 @@
 import { FC } from "react";
 import styles from "./card.module.scss";
 import { useNavigate } from "react-router-dom";
+import { Button } from "../../../shared/components";
+import { HeartIcon } from "../../../shared/icons/HeartIcon";
 
 type BookPrevieCardProps = {
   name: string;
@@ -21,15 +23,19 @@ export const BookPrevieCard: FC<BookPrevieCardProps> = ({
     <div className={styles.card} onClick={() => navigate(`/${id}`)}>
       <div className={styles.img}>
         <img src={img} alt="books-img" />
+        <div className={styles.icon}>
+          <HeartIcon />
+        </div>
       </div>
 
       <div className={styles.descr}>
         <div>
-          <div className={styles.name}>{name}</div>
+          <h3 className={styles.name}>{name}</h3>
           <p className={styles.author}>{author}</p>
-          <div className={styles.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sequi asperiores alias voluptas. Unde amet alias vero sint porro cumque impedit corporis optio, aspernatur, fuga, autem deleniti veniam! Accusantium, consequatur.</div>
-          <button className={styles.button}>Написать владельцу</button>
         </div>
+        <div className={styles.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sequi asperiores alias voluptas. Unde amet alias vero sint porro cumque impedit corporis optio, aspernatur, fuga, autem deleniti veniam! Accusantium, consequatur.</div>
+        <p className={styles.genre}>Жанр: психология</p>
+        <Button className={styles.button}>Написать владельцу</Button>
       </div>
     </div>
   );

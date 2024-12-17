@@ -48,3 +48,10 @@
     background: var(--main-color);
   }
 }
+
+.list{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
