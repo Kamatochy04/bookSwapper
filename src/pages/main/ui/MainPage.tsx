@@ -1,69 +1,31 @@
-import { Container, Input } from "../../../shared/components";
-import { BookPrevieCard } from "../../../widgets";
+// import { CustomerServiceOutlined } from "@ant-design/icons";
 
-import img from "../../../shared/assets/book_1.jpg";
-// import img_2 from "../../../shared/assets/book_2.jpg";
-// import img_3 from "../../../shared/assets/book_3.jpg";
+import { Container,  SearchInput } from "../../../shared/components";
+// import { BookPrevieCard } from "../../../widgets";
 
+// import img from "../../../shared/assets/book_1.jpg";
 import styles from "./mainPage.module.scss";
-import { CustomerServiceOutlined, SearchOutlined } from "@ant-design/icons";
 
-// const books = [
-//   { name: "Скажи жизни да", author: "Андрей Валюк", img: img, id: 1 },
-//   { name: "Сто лет одиночества", author: "Андрей Валюк", img: img_2, id: 2 },
-//   { name: "Мы", author: "Андрей Валюк", img: img_3, id: 3 },
-// ];
 
 const MainPage = () => {
   return (
     <>
       <div className={styles.books}>
         <Container>
-          <div className={styles.input}>
-            <Input placeholder="Поиск книги ..."/>
-            <div className={styles.icon}>
-              <SearchOutlined />
-            </div>
-          </div>
+          <SearchInput />
 
+          <div className={styles.line}></div>
+
+          <h2 className={styles.title}>Список всех книг</h2>
+
+          <p className={styles.sub_title}>Жанры книг</p>
+       
           <div className={styles.genre}>
-            <h3 className={styles.genre__title}>Жанры</h3>
-            <div className={styles.genre__container}>
-              <div className={styles.genre__icon}>
-                <CustomerServiceOutlined />
-                <p className={styles.genre__icon_text}>Жанр</p>
-              </div>
-              <div className={styles.genre__icon}>
-                <CustomerServiceOutlined />
-                <p className={styles.genre__icon_text}>Жанр</p>
-              </div>
-              <div className={styles.genre__icon}>
-                <CustomerServiceOutlined />
-                <p className={styles.genre__icon_text}>Жанр</p>
-              </div>
-              <div className={styles.genre__icon}>
-                <CustomerServiceOutlined />
-                <p className={styles.genre__icon_text}>Жанр</p>
-              </div>
-              <div className={styles.genre__icon}>
-                <CustomerServiceOutlined />
-                <p className={styles.genre__icon_text}>Жанр</p>
-              </div>
-              <div className={styles.genre__icon}>
-                <CustomerServiceOutlined />
-                <p className={styles.genre__icon_text}>Жанр</p>
-              </div>
-              <div className={styles.genre__icon}>
-                <CustomerServiceOutlined />
-                <p className={styles.genre__icon_text}>Жанр</p>
-              </div>
-            </div>
-          </div>
-        
-          <div className={styles.list}>
-            <BookPrevieCard name={"Скажи жизни да"} author={"А.В. Валентинович"} img={img} id={0} />
-            <BookPrevieCard name={"Скажи жизни да"} author={"А.В. Валентинович"} img={img} id={0} />
-            <BookPrevieCard name={"Скажи жизни да"} author={"А.В. Валентинович"} img={img} id={0} />
+            <div className={styles.genre__item}>Психология</div>
+            <div className={styles.genre__item}>Классическая литература</div>
+            <div className={styles.genre__item}>Детская литература </div>
+            <div className={styles.genre__item}>Фентези</div>
+            <div className={`${styles.genre__item} ${styles.genre_active}`}>Рассказы</div>
           </div>
         </Container>
       </div>

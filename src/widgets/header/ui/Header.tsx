@@ -8,8 +8,14 @@ export const Header = () => {
         <Container>
           <div className={styles.header__container}>
             <a href="" className={styles.logo}>
-              BookSwap
+              BooksSwapper
             </a>
+            <div className={styles.line}></div>
+            <div className={styles.burger}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </Container>
       </header>

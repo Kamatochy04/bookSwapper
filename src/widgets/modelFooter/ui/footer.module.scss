@@ -3,16 +3,23 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background: var(--main-color);
-  border-top: 1px solid #ffffff7c;
+  background: var(--second-bg-color);
   border-radius: 15px 15px 0 0;
   &__container {
+    padding: 5px 0;
     max-width: 400px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
   }
+}
+
+.button{
+  position: absolute;
+  width: 100%;
+  bottom: 65px;
 }
 
 .icon {
@@ -24,9 +31,8 @@
   border: 1px solid #ffffff00;
   padding: 8px;
   svg {
-    fill: var(--light-color);
-    width: 20px;
-    height: 20px;
+    stroke-width: 2px;
+    stroke: #fff;
   }
   p {
     font-size: 12px;
@@ -37,4 +43,15 @@
     border-radius: 8px;
     transition: all 0.4s;
   }
+}
+
+.plus{
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--main-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

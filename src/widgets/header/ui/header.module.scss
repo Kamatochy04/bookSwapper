@@ -1,15 +1,41 @@
 .header {
-  background: var(--main-color);
   &__container {
-    padding: 15px 0;
-
-    display: flex;
+    padding: 25px 0;
+    max-width: 400px;
+    margin: 0 auto;
+    display: grid;
     align-items: center;
-    justify-content: center;
+    grid-template-columns: 1fr 2fr 30px;
+    gap: 15px;
   }
   .logo {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 600;
     color: var(--light-color);
+  }
+}
+
+.line{
+  width: 100%;
+  height: 1px;
+  background: #fff;
+}
+
+.burger{
+  width: 30px;
+  height: 20px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    &:nth-child(3){
+      width: 50%;
+    }
   }
 }
