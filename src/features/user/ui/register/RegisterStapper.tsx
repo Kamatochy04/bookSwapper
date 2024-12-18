@@ -1,69 +1,42 @@
-import { createContext, useEffect, useState } from "react";
-import { Logo } from "../../../../shared/components";
-import { Steps } from "../../../../widgets";
-import { ConfirmEmailForm } from "./steps/ConfirmEmailForm";
-import { PersonalUserData } from "./steps/PersonalUserData";
-import { UserDataform } from "./steps/UserDataform";
-
-import {
-  getSessinStorage,
-  removeSessionStorage,
-  setSessionStorage,
-} from "../../../../shared/utils/sessionStorage";
-import styles from "./styels/registerStapper.module.scss";
-import { AuthContexType } from "../../../../model";
 import { useNavigate } from "react-router-dom";
 
-const steps = [<UserDataform />, <ConfirmEmailForm />, <PersonalUserData />];
+import { LeftArrowIcon } from "../../../../shared/icons/LeftIcon";
 
-export const RegisterContext = createContext<AuthContexType>({
-  prevStep: () => {},
-  nextStep: () => {},
-});
+import { Button, Container, Input } from "../../../../shared/components";
+import { GoogleIcon } from "../../../../shared/icons/GoogleIcon";
+import { EmailIcon } from "../../../../shared/icons/EmailIcon";
+
+import styles from "./register.module.scss"
 
 export const RegisterStapper = () => {
-  const [currentStep, setCurrentStep] = useState(
-    Number(getSessinStorage("register-key")) | 0
-  );
+  const navigate = useNavigate()
 
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    setSessionStorage("register-key", currentStep);
-
-    setCurrentStep(Number(getSessinStorage("register-key")));
-  }, [currentStep, setCurrentStep]);
-
-  useEffect(() => {
-    return () => {
-      removeSessionStorage("register-key");
-    };
-  }, []);
-
-  const nextStep = () => {
-    setCurrentStep((prev) => prev + 1);
-  };
-  const prevStep = () => {
-    setCurrentStep((prev) => prev - 1);
-  };
 
   return (
     <div className={styles.box}>
-      <div className={styles.container}>
-        <Logo />
-
-        <div className={styles.content}>
-          <RegisterContext.Provider value={{ nextStep, prevStep }}>
-            {steps[currentStep]}
-          </RegisterContext.Provider>
+      <Container>
+        <div className={styles.header} onClick={() => navigate(-1)}>
+          <LeftArrowIcon />
         </div>
+        <h1 className={styles.title}>Создайте свой <br /> аккаунт</h1>
+      
+        <form className={styles.form}>
+          <Input label="Имя пользователя"/>
+          <Input label="Номер телефона"/>
+          <Input label="Пароль"/>
+          <Input label="Повторите пароль"/>
+          <Button className={styles.button}>Зарегистрироваться</Button>
+        </form>
 
-        <Steps currentStep={currentStep + 1} countOfStep={3} />
+        <div className={styles.line}></div>
+      
         <div className={styles.footer}>
-          <p onClick={() => navigate("/login")}>Войти в аккаунт</p>
-          <p>Забыли пароль</p>
+          <div className={styles.footer__item}><GoogleIcon /></div>
+          <div className={styles.footer__item}><EmailIcon /></div>
         </div>
-      </div>
+
+        <p className={styles.login__text}>Уже есть акканунт? <span>Войти</span> </p>
+      </Container>
     </div>
   );
 };

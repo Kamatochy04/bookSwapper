@@ -1,22 +1,27 @@
 export const GenreItemsArr = [
     {
         isActive: false,
-        text: "Психология"
+        text: "Психология",
+        id: 123
     },
     {
         isActive: false,
-        text: "Классическая литература"
+        text: "Классическая литература",
+        id: 322
     },
     {
         isActive: false,
-        text: "Детская литература"
+        text: "Детская литература",
+        id: 482
     },
     {
         isActive: false,
-        text: "Фентези"
+        text: "Фентези",
+        id: 289
     },
     {
         isActive: false,
-        text: "Рассказы"
+        text: "Рассказы",
+        id: 798
     },
 ]

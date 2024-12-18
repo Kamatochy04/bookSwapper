@@ -8,41 +8,7 @@ const users = [
     name: "Андрей Валюк",
     lastMessage: "Привет хотел бы обменять эту книгу",
   },
-  {
-    avata: "Г",
-    name: "Андрей Валюк",
-    lastMessage: "Привет хотел бы обменять эту книгу",
-  },
-  {
-    avata: "А",
-    name: "Андрей Валюк",
-    lastMessage: "Привет хотел бы обменять эту книгу",
-  },
-  {
-    avata: "А",
-    name: "Андрей Валюк",
-    lastMessage: "Привет хотел бы обменять эту книгу",
-  },
-  {
-    avata: "А",
-    name: "Андрей Валюк",
-    lastMessage: "Привет хотел бы обменять эту книгу",
-  },
-  {
-    avata: "А",
-    name: "Андрей Валюк",
-    lastMessage: "Привет хотел бы обменять эту книгу",
-  },
-  {
-    avata: "А",
-    name: "Андрей Валюк",
-    lastMessage: "Привет хотел бы обменять эту книгу",
-  },
-  {
-    avata: "А",
-    name: "Андрей Валюк",
-    lastMessage: "Привет хотел бы обменять эту книгу",
-  },
+
 ];
 
 const Chats = () => {
@@ -50,9 +16,8 @@ const Chats = () => {
 
   return (
     <div className={styles.chat}>
-      <Container classname={styles.c}>
-        <div className={styles.container}>
-          <div className={styles.people}>
+      <Container>
+        <div className={styles.people}>
             {users.map((item, chatId) => (
               <div
                 key={chatId}
@@ -61,26 +26,11 @@ const Chats = () => {
               >
                 <div className={styles.avatar}>{item.avata}</div>
                 <div className={styles.inf}>
-                  <p className={styles.name}>{item.name}</p>
+                  <p className={styles.name}>{item.name} </p>
                   <span className={styles.lastMessage}>{item.lastMessage}</span>
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className={styles.chats}>
-            <div className={styles.header}>
-              <div className={styles.people__item}>
-                <div className={styles.avatar}>А</div>
-                <div className={styles.inf}>
-                  <p className={styles.name}>Андрей Валюк</p>
-                  <span className={styles.lastMessage}>
-                    Привет хотел бы обменять эту книгу
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </Container>
     </div>

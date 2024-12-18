@@ -1,8 +1,8 @@
 import { FC, useState } from "react";
-import styles from "./card.module.scss";
-// import { useNavigate } from "react-router-dom";
 import { Button } from "../../../shared/components";
 import { HeartIcon } from "../../../shared/icons/HeartIcon";
+
+import styles from "./card.module.scss";
 
 type BookPrevieCardProps = {
   name: string;

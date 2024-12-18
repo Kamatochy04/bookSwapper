@@ -48,7 +48,7 @@ export const ModelFooter = () => {
             className={({ isActive }) =>
               `${styles.icon} ${isActive ? styles.icon_active : ""}`
             }
-            to={"accaunt"}
+            to={"register"}
           >
             <AccauntIcon />
           </NavLink>

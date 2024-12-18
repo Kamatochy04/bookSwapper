@@ -16,16 +16,16 @@ const MainPage = () => {
 
   const toActive = (idItem:number) => {
     setGenre(prev => 
-      prev.map((item, id) => 
-        id === idItem ?{...item, isActive: !item.isActive} : item
+      prev.map((item) => 
+        item.id === idItem ?{...item, isActive: !item.isActive} : item
       )    
     )
   }
 
   const deleteGenre = (idItem: number) => {
     setGenre(prev => 
-      prev.filter((_, id) => 
-       id !== idItem
+      prev.filter((item) => 
+       item.id !== idItem
       )    
     )
   }
@@ -43,10 +43,10 @@ const MainPage = () => {
           <p className={styles.sub_title}>Жанры книг</p>
        
           <div className={styles.genre}>
-            {genre.map((item, id) =>(
-              <div className={`${styles.genre__item} ${item.isActive ? styles.genre_active : "" }`} key={id} onClick={() =>toActive(id)}>
+            {genre.map((item) =>(
+              <div className={`${styles.genre__item} ${item.isActive ? styles.genre_active : "" }`} key={item.id} onClick={() =>toActive(item.id)}>
                 {item.text}
-                <div className={styles.clouse__icon} onClick={() => deleteGenre(id)}><PlusIcon /></div>
+                <div className={styles.clouse__icon} onClick={() => deleteGenre(item.id)}><PlusIcon /></div>
               </div>
             ))}
           </div>
