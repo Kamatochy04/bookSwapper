@@ -1,6 +1,6 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import styles from "./card.module.scss";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { Button } from "../../../shared/components";
 import { HeartIcon } from "../../../shared/icons/HeartIcon";
 
@@ -15,15 +15,15 @@ export const BookPrevieCard: FC<BookPrevieCardProps> = ({
   name,
   author,
   img,
-  id,
+  // id,
 }) => {
-  const navigate = useNavigate();
+  const [isFavorite, setIsFavorite] = useState(false)
 
   return (
-    <div className={styles.card} onClick={() => navigate(`/${id}`)}>
+    <div className={styles.card}>
       <div className={styles.img}>
         <img src={img} alt="books-img" />
-        <div className={styles.icon}>
+        <div className={`${styles.icon} ${isFavorite ? styles.icon_active : ""}`} onClick={() => setIsFavorite(prev => !prev)}>
           <HeartIcon />
         </div>
       </div>

@@ -1,13 +1,35 @@
-import { Container,  SearchInput } from "../../../shared/components";
+import { useState } from "react";
+
 import { BookPrevieCard } from "../../../widgets";
+import { GenreItemsArr } from "../assets/genreItems";
+import { PlusIcon } from "../../../shared/icons/FooterIcon";
+import { Container,  SearchInput } from "../../../shared/components";
 
 import img from "../../../shared/assets/book_1.jpg";
 import img_2 from "./book_2.jpg"
 
 import styles from "./mainPage.module.scss";
 
-
 const MainPage = () => {
+  const [genre, setGenre] = useState(GenreItemsArr)
+
+
+  const toActive = (idItem:number) => {
+    setGenre(prev => 
+      prev.map((item, id) => 
+        id === idItem ?{...item, isActive: !item.isActive} : item
+      )    
+    )
+  }
+
+  const deleteGenre = (idItem: number) => {
+    setGenre(prev => 
+      prev.filter((_, id) => 
+       id !== idItem
+      )    
+    )
+  }
+
   return (
     <>
       <div className={styles.books}>
@@ -21,15 +43,17 @@ const MainPage = () => {
           <p className={styles.sub_title}>Жанры книг</p>
        
           <div className={styles.genre}>
-            <div className={styles.genre__item}>Психология</div>
-            <div className={styles.genre__item}>Классическая литература</div>
-            <div className={styles.genre__item}>Детская литература </div>
-            <div className={styles.genre__item}>Фентези</div>
-            <div className={`${styles.genre__item} ${styles.genre_active}`}>Рассказы</div>
+            {genre.map((item, id) =>(
+              <div className={`${styles.genre__item} ${item.isActive ? styles.genre_active : "" }`} key={id} onClick={() =>toActive(id)}>
+                {item.text}
+                <div className={styles.clouse__icon} onClick={() => deleteGenre(id)}><PlusIcon /></div>
+              </div>
+            ))}
           </div>
 
           <div className={styles.list}>
             <BookPrevieCard name={"Скажи жизни да"} author={"В.Э. Франклин"} img={img} id={0} />
+            <BookPrevieCard name={"Война и мир"} author={"А.С. Пушкин"} img={img_2} id={0} />
             <BookPrevieCard name={"Война и мир"} author={"А.С. Пушкин"} img={img_2} id={0} />
           </div>
         </Container>
