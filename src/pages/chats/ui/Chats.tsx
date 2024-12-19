@@ -16,7 +16,7 @@ const Chats = () => {
 
   return (
     <div className={styles.chat}>
-      <Container>
+      <Container classname={styles.p0}>
         <div className={styles.people}>
             {users.map((item, chatId) => (
               <div
