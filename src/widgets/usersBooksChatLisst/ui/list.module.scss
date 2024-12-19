@@ -9,9 +9,10 @@
     transform: rotate(45deg);
     width: 30px;
     height: 30px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: sticky;
+    top: 0;
+    left: 100%;
+    
     cursor: pointer;
     svg{
         fill: var(--light-color);

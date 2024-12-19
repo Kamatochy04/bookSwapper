@@ -16,7 +16,7 @@ type Message = {
 const Chat = () => {
   const [messages, setMessage] = useState<Message[]>([])
   const [text, setText] = useState("")
-  const [showBooks, setShowBooks] = useState(true)
+  const [showBooks, setShowBooks] = useState(false)
 
   const navigate = useNavigate();
 
