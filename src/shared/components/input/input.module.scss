@@ -3,25 +3,37 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
-  & .label {
-    font-weight: 500;
-    font-size: 12px;
-    color: var(--text-light-color);
-    margin: 0 0 2px 5px;
-  }
-
   & input {
-    width: 100%;
-    padding: 10px ;
     border-radius: 10px;
     background: var(--second-bg-color);
     border: 1px solid var(--main-color);
     transition: all 0.3s;
-    font-size: 16px;
-
-    color: var(--text-light-color);
     &:focus {
       border-color: var(--main-color);
     }
+  }
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  transition: all 0.3s;
+  font-size: 16px;
+  color: var(--text-light-color);
+}
+
+.label {
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--text-light-color);
+  margin: 0 0 2px 5px;
+}
+
+.border {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    border-bottom: 1px solid var(--main-color);
   }
 }

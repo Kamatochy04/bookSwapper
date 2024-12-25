@@ -56,7 +56,7 @@ const Chat = () => {
           {messages.map(item => (<p className={styles.message__item}>{item.text}</p>))}
         </div>
         <div className={styles.footer}>
-          <Input onChange={(e) => setText(e.target.value)}/>
+          <Input onChange={(e) => setText(e.target.value)} value={text}/>
         
           <div className={styles.send} onClick={() => handleSendMessage("sdfsdfsd")}>
             <SendOutlined />

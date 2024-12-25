@@ -11,10 +11,10 @@ const NewBook = () => {
   return (
     <div className={styles.book}>
       <Container>
-        <Input label="Название книги" />
-        <Input label="Автор" />
-        <Input label="Язык" />
-        <Input label="Название книги" />
+        <Input variant="onlyBorder" label="Название книги" />
+        <Input variant="onlyBorder" label="Автор" />
+        <Input variant="onlyBorder" label="Язык" />
+        <Input variant="onlyBorder" label="Название книги" />
         <div className={styles.book__box}>
           <div className={styles.book__active}>
             <div className={styles.sercle}></div>
